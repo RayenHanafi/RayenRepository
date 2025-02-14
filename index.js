@@ -49,7 +49,7 @@ function startGame(niveau) {
 // Function to check the user's guess
 submitGuess.addEventListener('click', () => {
     const guess = parseInt(guessInput.value);
-    if (isNaN(guess) {
+    if (isNaN(guess)) {
         result.textContent = "Veuillez entrer un nombre valide.";
         return;
     }
