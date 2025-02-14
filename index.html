@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu De Chiffre</title>
+    <title>Jeu du Chiffre Caché</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to CSS file -->
   </head>
   <body>
-    <div id="title">Jeu De Chiffre</div>
-    <br />
-    <div id="difficulté">
-      <input type="checkbox" name="Facile" id="Facile" />
-      <label for="Facile">Facile</label>
-      <input type="checkbox" name="intermidiaire" id="intermidiaire" />
-      <label for="intermidiaire">Intermidiaire</label>
-      <input type="checkbox" name="Difficile" id="Difficile" />
-      <label for="Difficile">Difficile</label>
+    <div class="container">
+      <h1>Jeu du Chiffre Caché</h1>
+      <p>Devinez le nombre secret !</p>
+      <button id="startButton">Commencer le Jeu</button>
+      <div id="gameSection" class="hidden">
+        <p id="instructions"></p>
+        <input type="number" id="guessInput" placeholder="Entrez votre guess" />
+        <button id="submitGuess">Soumettre</button>
+        <p id="result"></p>
+        <p id="attemptsLeft"></p>
+      </div>
+      <button id="restartButton" class="hidden">Rejouer</button>
     </div>
-    <div id="input">
-      <input
-        type="text"
-        name="chiffre"
-        id="chiffre"
-        placeholder="Entrez un chiffre"
-      />
-      <button type="submit">Check</button>*
-      <button type="reset">Reset</button>
-    </div>
+
+    <script src="script.js"></script>
+    <!-- Link to JavaScript file -->
   </body>
 </html>
