@@ -1,9 +1,7 @@
-// script.js
 let nombreSecret;
 let tentativesRestantes;
 let min, max;
 
-// Get elements from the HTML
 const startButton = document.getElementById('startButton');
 const gameSection = document.getElementById('gameSection');
 const instructions = document.getElementById('instructions');
@@ -13,7 +11,10 @@ const result = document.getElementById('result');
 const attemptsLeft = document.getElementById('attemptsLeft');
 const restartButton = document.getElementById('restartButton');
 
-// Function to start the game
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 startButton.addEventListener('click', () => {
     const niveau = prompt("Choisissez un niveau (facile, intermediaire, difficile):").toLowerCase();
     if (niveau === 'facile' || niveau === 'intermediaire' || niveau === 'difficile') {
@@ -23,7 +24,6 @@ startButton.addEventListener('click', () => {
     }
 });
 
-// Function to start the game based on difficulty
 function startGame(niveau) {
     if (niveau === 'facile') {
         tentativesRestantes = 10;
@@ -39,14 +39,13 @@ function startGame(niveau) {
         max = 200;
     }
 
-    nombreSecret = Math.floor(Math.random() * (max - min + 1)) + min;
+    nombreSecret = getRandomInt(min, max);
     startButton.classList.add('hidden');
     gameSection.classList.remove('hidden');
     instructions.textContent = `Devinez un nombre entre ${min} et ${max}.`;
     attemptsLeft.textContent = `Tentatives restantes : ${tentativesRestantes}`;
 }
 
-// Function to check the user's guess
 submitGuess.addEventListener('click', () => {
     const guess = parseInt(guessInput.value);
     if (isNaN(guess)) {
@@ -74,13 +73,11 @@ submitGuess.addEventListener('click', () => {
     guessInput.value = ''; // Clear the input field
 });
 
-// Function to end the game
 function endGame() {
     submitGuess.disabled = true;
     restartButton.classList.remove('hidden');
 }
 
-// Function to restart the game
 restartButton.addEventListener('click', () => {
     gameSection.classList.add('hidden');
     restartButton.classList.add('hidden');
