@@ -70,7 +70,7 @@ submitGuess.addEventListener('click', () => {
         endGame();
     }
 
-    guessInput.value = ''; // Clear the input field
+    guessInput.value = ''; 
 });
 
 function endGame() {
