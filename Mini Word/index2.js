@@ -1,12 +1,11 @@
 const input = document.getElementById('input');
-const submit = document.getElementById('submit');
 const reset = document.getElementById('reset');
 let result = document.getElementById('result');
 const colorPicker = document.getElementById('colorPicker');
 const fontSize = document.getElementById('fontSize');
 const fontStyle = document.getElementById('fontStyle');
 
-submit.addEventListener('click', () => {
+input.addEventListener('input', () => {
     result.classList.remove('hidden');
     result.innerHTML = input.value;
     result.style.color = colorPicker.value;
