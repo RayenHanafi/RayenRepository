@@ -11,18 +11,29 @@
     <title>Mini Word</title>
   </head>
   <body>
-    <div>
-      <div class="mb-3">
-        <label for="name" class="form-label">Name:</label>
-        <input type="text" id="name" class="form-control"/>
+    <h1 class="text-center mt-5">Todo List</h1>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="content" class="form-label">Content:</label>
+            <input type="text" id="content" class="form-control" />
+          </div>
+          <br />
+          <button type="submit" id="addTodo" class="btn btn-primary">
+            Add Todo
+          </button>
+          <br />
+        </div>
+        <div class="col-md-6">
+          <ul id="todoList" class="list-group"></ul>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="content" class="form-label">Content:</label>
-        <input type="text" id="content" class="form-control"/>
-      <div>
-      <button type="submit" id="addTodo" class="btn btn-primary">Add Todo</button>
     </div>
-    <ul id="todoList" class="list-group"></ul>
     <script src="index3.js"></script>
   </body>
 </html>
