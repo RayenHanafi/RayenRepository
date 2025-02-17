@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="index2.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Word</title>
   </head>
-  <body>
-    <div>
-      <input type="text" id="input" placeholder="text" />
-      <br />
-      <div>
-        <p id="result" class="hidden"></p>
+  <body
+    class="bg-light d-flex justify-content-center align-items-center vh-100"
+  >
+    <div class="container">
+      <div class="card shadow p-4">
+        <h2 class="text-center mb-4">Mini Word</h2>
+        <div class="mb-3">
+          <input
+            type="text"
+            id="input"
+            class="form-control"
+            placeholder="Enter text"
+          />
+        </div>
+        <p id="result" class="hidden text-center mt-3"></p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <label class="form-label">Color</label>
+            <input
+              type="color"
+              id="colorPicker"
+              class="form-control form-control-color"
+              value="#000000"
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Font Size</label>
+            <input
+              type="number"
+              id="fontSize"
+              class="form-control"
+              min="0"
+              max="300"
+              value="16"
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Font Style</label>
+            <select id="fontStyle" class="form-select">
+              <option value="Arial">Arial</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Tahoma">Tahoma</option>
+              <option value="Trebuchet MS">Trebuchet MS</option>
+              <option value="Impact">Impact</option>
+              <option value="Comic Sans MS">Comic Sans MS</option>
+              <option value="Poppins">Poppins</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="reset" id="reset" class="btn btn-danger">Reset</button>
+        </div>
       </div>
-      <input type="color" id="colorPicker" value="#000000" />
-      <input type="number" id="fontSize" min="0" max="300" value="16" />
-      <select id="fontStyle">
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Helvetica">Helvetica</option>
-        <option value="Times New Roman">Times New Roman</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Courier New">Courier New</option>
-        <option value="Tahoma">Tahoma</option>
-        <option value="Trebuchet MS">Trebuchet MS</option>
-        <option value="Impact">Impact</option>
-        <option value="Comic Sans MS">Comic Sans MS</option>
-        <option value="Poppins">Poppins</option>
-      </select>
-      <br /><br />
-      <button type="reset" id="reset">Reset</button>
-      <script src="index2.js"></script>
     </div>
+
+    <script src="index2.js"></script>
   </body>
 </html>
