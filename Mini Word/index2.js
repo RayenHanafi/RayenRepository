@@ -16,6 +16,9 @@ input.addEventListener('input', () => {
 reset.addEventListener('click', () => {
     result.classList.add('hidden');
     input.value = '';
+    colorPicker.value = '#000000';
+    fontSize.value = '16';
+    fontStyle.value = 'Arial';
 });
 
 colorPicker.addEventListener('change', () => {
