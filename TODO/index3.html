@@ -10,38 +10,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Word</title>
   </head>
-  <body>
-    <h1 class="text-center mt-5">Todo List</h1>
+  <body
+    class="bg-light d-flex justify-content-center align-items-center vh-100"
+  >
     <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="name" class="form-label">Name:</label>
-            <input
-              type="text"
-              id="name"
-              class="form-control"
-              placeholder="Enter the neme of your Todo"
-              autofocus
-            />
+      <div class="card shadow p-4">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-center mt-5">Todo List</h2>
           </div>
-          <div class="mb-3">
-            <label for="content" class="form-label">Content:</label>
-            <input
-              type="text"
-              id="content"
-              class="form-control"
-              placeholder="Enter the content of your Todo"
-            />
-          </div>
-          <br />
-          <button type="submit" id="addTodo" class="btn btn-primary">
-            Add Todo
-          </button>
-          <br />
         </div>
-        <div class="col-md-6">
-          <ul id="todoList" class="list-group"></ul>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name:</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Enter the neme of your Todo"
+                autofocus
+              />
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">Content:</label>
+              <input
+                type="text"
+                id="content"
+                class="form-control"
+                placeholder="Enter the content of your Todo"
+              />
+            </div>
+            <br />
+            <button type="submit" id="addTodo" class="btn btn-primary">
+              Add Todo
+            </button>
+            <br />
+          </div>
+          <div class="col-md-6">
+            <ul id="todoList" class="list-group"></ul>
+          </div>
         </div>
       </div>
     </div>
