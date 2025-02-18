@@ -9,10 +9,16 @@ document.getElementById('addTodo').addEventListener('click', () => {
       alert("Please fill in both fields.");
       return;
     }
+    const suppButton = document.createElement('button');
+    suppButton.textContent = '🗑';
     const todo = document.createElement('li');
     todo.textContent = name.value + ' : ' + content.value;
     todo.classList.add('list-group-item');
+    todo.appendChild(suppButton);
     todoList.appendChild(todo);
     name.value = '';
     content.value = '';
+    suppButton.addEventListener('click', () => {
+      todoList.removeChild(todo);
+  });
 });
